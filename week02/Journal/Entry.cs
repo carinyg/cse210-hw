@@ -9,6 +9,7 @@ public class Entry
         Console.WriteLine(_date);
         Console.WriteLine(_promptText);
         Console.WriteLine(_entryText);
+        Console.WriteLine();
     }
 
 }
