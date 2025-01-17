@@ -6,7 +6,9 @@ public class Entry
 
     public void Display()
     {
-        Console.WriteLine(_date);
+        Console.Write("Date: ");
+        Console.Write(_date);
+        Console.Write(" - Prompt: ");
         Console.WriteLine(_promptText);
         Console.WriteLine(_entryText);
         Console.WriteLine();
