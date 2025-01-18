@@ -6,10 +6,12 @@ public class Journal
     {
         string prompt = PromptGenerator.GetRandomPrompt();
         Console.WriteLine(prompt);
-        Console.WriteLine("Enter your journal entry: ");
+        Console.Write("> ");
         string entryText = Console.ReadLine();
         Entry entry = new(prompt, entryText);
         _entries.Add(entry);
+        Console.WriteLine("");
+        
 
     }
 
@@ -17,7 +19,7 @@ public class Journal
     {
         foreach (Entry entry in _entries)
         {
-            Console.WriteLine(entry);
+            entry.Display();
         }
 
     }
