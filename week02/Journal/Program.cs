@@ -25,7 +25,7 @@ class Program
 
             else if (userChoice == "2")
             {
-                Console.WriteLine("Display All Entries");
+                journal.DisplayAll();
             }
 
             else if (userChoice == "3")
