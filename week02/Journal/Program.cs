@@ -16,7 +16,35 @@ class Program
 
             string userChoice = Console.ReadLine();
 
-            Console.WriteLine($"You chose {userChoice}");
+            if (userChoice == "1")
+            {
+                Console.WriteLine("Create new entry");
+            }
+
+            else if (userChoice == "2")
+            {
+                Console.WriteLine("Display All Entries");
+            }
+
+            else if (userChoice == "3")
+            {
+                Console.WriteLine("Save to File");
+            }
+
+            else if (userChoice == "4")
+            {
+                Console.WriteLine("Load from File");
+            }
+
+            else if (userChoice == "5")
+            {
+                return;
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid choice. Please try again.");
+            }
         }
     }
 }
