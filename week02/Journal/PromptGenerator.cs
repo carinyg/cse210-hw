@@ -29,6 +29,8 @@ public class PromptGenerator
 
     public static string GetRandomPrompt()
     {
-        return "";
+        Random random = new();
+        int index = random.Next(_prompts.Count);
+        return _prompts[index];
     }
 }
