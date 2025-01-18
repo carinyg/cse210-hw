@@ -1,6 +1,6 @@
 public class Journal
 {
-    public List<Entry> _entries = new List<Entry>();
+    public List<Entry> _entries = [];
 
     public void AddEntry()
     {
@@ -8,10 +8,15 @@ public class Journal
         Console.WriteLine(prompt);
         Console.Write("> ");
         string entryText = Console.ReadLine();
-        Entry entry = new(prompt, entryText);
+        Entry entry = new()
+        {
+            _date = DateTime.Now.ToString(),
+            _promptText = prompt,
+            _entryText = entryText
+        };
         _entries.Add(entry);
         Console.WriteLine("");
-        
+
 
     }
 
