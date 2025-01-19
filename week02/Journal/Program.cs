@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 class Program
 {
@@ -6,7 +7,9 @@ class Program
     {
         Journal journal = new();
 
+        Console.WriteLine("");
         Console.WriteLine("Welcome to the Journal Program!");
+        Console.WriteLine("");
         
         while (true)
         {
@@ -17,9 +20,12 @@ class Program
             Console.WriteLine("4. Load from a File");
             Console.WriteLine("5. Quit");
 
-            Console.Write("Which would you like to do? ");
-
+            Console.WriteLine("Which would you like to do? ");
+            Console.Write("> ");
+            
             string userChoice = Console.ReadLine();
+
+            Console.WriteLine("");
 
             if (userChoice == "1")
             {
@@ -29,16 +35,35 @@ class Program
             else if (userChoice == "2")
             {
                 journal.DisplayAll();
+                Console.WriteLine("");
             }
 
             else if (userChoice == "3")
             {
-                journal.SaveToFile("journal.txt");
+                Console.WriteLine("Choose a file name ending in .txt to save your journal to: ");
+                Console.Write("> ");
+                string fileName = Console.ReadLine();
+                journal.SaveToFile(fileName);
+                Console.WriteLine($"Journal saved to {fileName}");
+                Console.WriteLine("");
             }
 
             else if (userChoice == "4")
             {
-                Console.WriteLine("Load from File");
+                Console.WriteLine("Choose a file to load your journal from: ");
+                Console.Write("> ");
+                string fileName = Console.ReadLine();
+
+                List<Entry> newEntry = Journal.LoadFromFile(fileName);
+
+                foreach (Entry e in newEntry)
+                {
+                    journal._entries.Add(e);
+                }
+                Console.WriteLine($"Journal loaded from {fileName}");
+                Console.WriteLine("");
+                
+
             }
 
             else if (userChoice == "5")

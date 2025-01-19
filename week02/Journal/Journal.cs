@@ -1,3 +1,6 @@
+using System.Reflection.Metadata.Ecma335;
+using System.IO;
+
 public class Journal
 {
     public List<Entry> _entries = [];
@@ -31,11 +34,38 @@ public class Journal
 
     public void SaveToFile(string file)
     {
+        using (StreamWriter outputFile = new StreamWriter(file))
+        {
+            foreach (Entry entry in _entries)
+            {
+                outputFile.WriteLine($"{entry._date}~|~{entry._promptText}~|~{entry._entryText}");
+            }
+        }
 
     }
 
-    public void LoadFromFile(string file)
+    public static List<Entry> LoadFromFile(string file)
     {
+        Console.WriteLine("Loading from file...");
+        List<Entry> entry = new List<Entry>();
+
+        string fileName = file;
+
+        string[] lines = System.IO.File.ReadAllLines(fileName);
+
+        foreach (string line in lines)
+        {
+           string[] parts = line.Split("~|~");
+              Entry newEntry = new()
+              {
+                _date = parts[0],
+                _promptText = parts[1],
+                _entryText = parts[2]
+              };
+                entry.Add(newEntry);
+        }
+
+        return entry;
 
     }
 
