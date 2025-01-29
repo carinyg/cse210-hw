@@ -10,10 +10,9 @@ class Program
 
         Scripture s1 = new Scripture(r1,"If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him. But let him ask in faith, nothing wavering. For he that wavereth is like a wave of the sea driven with the wind and tossed.");
         
-        bool hidden = s1.IsCompletelyHidden();
-        string input = "";  
+        string input = ""; 
         
-        while ((input != "quit") || (hidden == false))
+        while (input != "quit")
         {
             Console.Clear();
             string reference = r1.GetDisplayText();
@@ -22,12 +21,12 @@ class Program
             Console.WriteLine("Press enter to continue or type 'quit' to finish:");
             input = Console.ReadLine();
             s1.HideRandomWords(3);
-            hidden = s1.IsCompletelyHidden();
-        }
-
-        if (hidden == true)
-        {
-            Console.WriteLine("Congratulations! You have successfully memorized the scripture!");
+            bool hidden = s1.IsCompletelyHidden();
+            if (hidden == true)
+            {
+                Console.WriteLine("Congratulations! You have successfully memorized the scripture!");
+                break;
+            }
         }
 
         if (input == "quit")

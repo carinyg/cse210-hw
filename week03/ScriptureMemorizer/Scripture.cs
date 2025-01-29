@@ -22,29 +22,26 @@ public class Scripture
 
     public void HideRandomWords(int numberToHide)
     {
-        bool test;
+        Random random = new Random();
+        var wordsToHide = _words.OrderBy(a => random.Next()).ToList();
+        int count = 0;
 
-        do{
-            Random rand = new Random();
-            int randomIndex = rand.Next(0, _words.Count);
-
-            int repeat = numberToHide;
-
-            do{
-                if (_words[randomIndex].IsHidden() == false)
-                {
-                    _words[randomIndex].Hide();
-                    repeat--;
-                }
-                else
-                {
-                    randomIndex = rand.Next(0, _words.Count);
-                }
-
-                test = IsCompletelyHidden();
-            }while(repeat > 0);
-
-        }while(test == true);
+        foreach (Word w in wordsToHide)
+        {
+            if (count == numberToHide)
+            {
+                break;
+            }
+            else if (w.IsHidden() == true)
+            {
+                continue;
+            }
+            else
+            {
+                w.Hide();
+                count++;
+            }       
+        }
 
     }
 
@@ -60,16 +57,13 @@ public class Scripture
 
     public bool IsCompletelyHidden()
     {
-        bool fullyHidden = true;
-
         foreach (Word w in _words)
         {
-            if (w.IsHidden() == false)
+            if (!w.IsHidden())
             {
-                fullyHidden = false;
+                return false;
             }
         }
-
-        return fullyHidden;
+        return true;
     }
 }
