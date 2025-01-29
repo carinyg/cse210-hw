@@ -4,10 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        Reference r1 = new Reference("John", 3, 16);
-        Console.WriteLine(r1.GetDisplayText());
+        Reference r1 = new Reference("James", 1, 5, 6);
 
-        Reference r2 = new Reference("John", 3, 16, 18);
-        Console.WriteLine(r2.GetDisplayText());
+        string scriptureText = "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him. But let him ask in faith, nothing wavering. For he that wavereth is like a wave of the sea driven with the wind and tossed.";
+        Scripture s1 = new Scripture(r1, scriptureText);
+
+        
+
+
+        Console.Write(r1.GetDisplayText());
     }
 }

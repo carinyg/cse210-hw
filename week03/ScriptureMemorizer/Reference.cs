@@ -20,7 +20,6 @@ public class Reference
         _chapter = chapter;
         _verse = startVerse;
         _endVerse = endVerse;
-
     }
 
     public string GetDisplayText()
