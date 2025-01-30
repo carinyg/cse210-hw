@@ -28,7 +28,12 @@ public class Scripture
 
         foreach (Word w in wordsToHide)
         {
-            if (count == numberToHide)
+            if (IsCompletelyHidden() == true)
+                {
+                    break;
+                }
+
+            else if (count == numberToHide)
             {
                 break;
             }
@@ -40,6 +45,7 @@ public class Scripture
             {
                 w.Hide();
                 count++;
+                
             }       
         }
 
