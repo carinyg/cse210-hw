@@ -25,7 +25,8 @@ public class Video
 
     public string GetDisplayVideoAndComments()
     {
-        string result = $"{_title} by {_author} ({_length} seconds)\n";
+        string result = $"{_title} by {_author} ({_length} seconds)\n{_comments.Count} comments\n";
+
         foreach (Comment comment in _comments)
         {
             result += $"  {comment.GetDisplayText()}\n";
