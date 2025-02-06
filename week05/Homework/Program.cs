@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Homework Project.");
+        Assignment assignment = new Assignment("Homework 02/05", "Inheritance");
+        Console.WriteLine(assignment.GetSummary());
     }
 }
