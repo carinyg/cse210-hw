@@ -4,7 +4,9 @@ using System.Diagnostics;
 class Program
 {
     static void Main(string[] args)
-    {
+    {//For Creativity, I added an animation to the Breathing activity that simulates breathing in and out.
+    //I also added a safeguard to the user input in the main menu to ensure that the user can only input a valid option.
+    
         string activityChoice = "0";
         do
         {
