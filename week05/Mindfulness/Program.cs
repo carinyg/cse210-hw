@@ -19,16 +19,21 @@ class Program
 
             if (activityChoice == "1")
             {
-               BreathingActivity breathingActivity = new BreathingActivity();
-               breathingActivity.DisplayStartingMessage();
-               breathingActivity.ShowSpinner(5);
-               Console.WriteLine("");
-               breathingActivity.Run(breathingActivity.GetDuration());
+                BreathingActivity breathingActivity = new BreathingActivity();
+                breathingActivity.DisplayStartingMessage();
+                Console.WriteLine("");
+                breathingActivity.Run(breathingActivity.GetDuration());
+                breathingActivity.DisplayEndingMessage();
             }
 
             else if (activityChoice == "2")
             {
-
+                ReflectingActivity reflectingActivity = new ReflectingActivity();
+                reflectingActivity.DisplayStartingMessage();
+                Console.WriteLine("");
+                reflectingActivity.Run(reflectingActivity.GetDuration());
+                Console.WriteLine("");
+                reflectingActivity.DisplayEndingMessage();
             }
 
             else if (activityChoice == "3")
@@ -43,11 +48,9 @@ class Program
 
             else
             {
-                Console.Write("Invalid Entry. Please type '1', '2', '3', or '4'.");
-                activityChoice = Console.ReadLine();
+                Console.Write("Invalid Entry. Please type '1', '2', '3', or '4'. Hit enter to try again.");
+                Console.ReadLine();
             }
-        }while (activityChoice != "4");
-
-        
+        }while (activityChoice != "4");   
     }
 }

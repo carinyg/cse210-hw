@@ -20,6 +20,7 @@ public class Activity
         _duration = int.Parse(Console.ReadLine());
         Console.Clear();
         Console.WriteLine("Get ready...");
+        ShowSpinner(5);
         Thread.Sleep(1000);
         return _duration;
     }
@@ -31,7 +32,11 @@ public class Activity
 
     public void DisplayEndingMessage()
     {
-
+        Console.WriteLine("Time's up! Well done!");
+        ShowSpinner(3);
+        Console.WriteLine("");
+        Console.WriteLine($"You have completed another {_duration} seconds of the {_name} Activity.");
+        ShowSpinner(7);
     }
 
     public void ShowSpinner(int seconds)
@@ -65,6 +70,26 @@ public class Activity
 
     public void ShowCountDown(int seconds)
     {
-        
+        for (int i = seconds; i > 0; i--)
+        {
+            if (i < 10)
+            {
+                Console.Write(i);
+                Thread.Sleep(1000);
+                Console.Write("\b \b");
+            }
+            else if (i >= 10 && i < 100)
+            {
+                Console.Write(i);
+                Thread.Sleep(1000);
+                Console.Write("\b\b \b");
+            }
+            else if (i >= 1000)
+            {
+                Console.Write(i);
+                Thread.Sleep(1000);
+                Console.Write("\b\b\b \b");
+            }
+        }   
     }
 }
