@@ -38,7 +38,12 @@ class Program
 
             else if (activityChoice == "3")
             {
-
+                ListingActivity listingActivity = new ListingActivity();
+                listingActivity.DisplayStartingMessage();
+                Console.WriteLine("");
+                listingActivity.Run(listingActivity.GetDuration());
+                Console.WriteLine("");
+                listingActivity.DisplayEndingMessage();
             }
 
             else if (activityChoice == "4")

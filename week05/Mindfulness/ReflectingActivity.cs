@@ -27,7 +27,7 @@ public class ReflectingActivity : Activity
         "Think of a time when you had to forgive someone.",
         "Think of a time when you felt the power of forgiveness in your life.",
         "Think of a time when you felt the power of repentance in your life.",
-        "Think of a time when your example helped someone else.",
+        "Think of a time when your example helped someone else."
     };
     private List<string> _questions = new List<string>
     {
@@ -83,7 +83,7 @@ public class ReflectingActivity : Activity
         "What did you learn about Jesus Christ through this experience?",
         "What did you learn about the Holy Ghost through this experience?",
         "What did you learn about yourself through this experience?",
-        "What did you learn about your relationships through this experience?",
+        "What did you learn about your relationships through this experience?"
     };
 
     public ReflectingActivity()
