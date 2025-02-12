@@ -11,6 +11,9 @@ class Program
         shape = new Rectangle("red", 10, 20);
         Console.WriteLine($"Area of the rectangle is {shape.GetArea()}");
         Console.WriteLine($"Color of the rectangle is {shape.GetColor()}");
-        
+
+        shape = new Circle("yellow", 7);
+        Console.WriteLine($"Area of the circle is {shape.GetArea()}");
+        Console.WriteLine($"Color of the circle is {shape.GetColor()}");
     }
 }
