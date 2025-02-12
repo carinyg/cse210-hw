@@ -49,7 +49,7 @@ public class Order
     {
         Console.WriteLine("Packing Slip:");
         Console.WriteLine();
-        Console.WriteLine($"Products for {_customer}:");
+        Console.WriteLine($"Products for {_customer.GetName()}:");
         ProductReceipt();
         Console.WriteLine($"Subtotal: ${CalculateCost()}");
         Console.WriteLine($"Shipping: ${ShippingCost()}");
