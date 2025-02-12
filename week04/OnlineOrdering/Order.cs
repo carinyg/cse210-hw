@@ -47,9 +47,9 @@ public class Order
 
     public void GeneratePackingSlip()
     {
-        Console.WriteLine("Packing Slip");
-        Console.WriteLine($"Customer: {_customer.DisplayCustomer()}");
-        Console.WriteLine("Products:");
+        Console.WriteLine("Packing Slip:");
+        Console.WriteLine();
+        Console.WriteLine($"Products for {_customer}:");
         ProductReceipt();
         Console.WriteLine($"Subtotal: ${CalculateCost()}");
         Console.WriteLine($"Shipping: ${ShippingCost()}");
@@ -59,6 +59,7 @@ public class Order
     public void GenerateShippingLabel ()
     {
         Console.WriteLine("Ship to:");
+        Console.WriteLine();
         Console.WriteLine(_customer.GetName());
         Console.WriteLine(_customer.GetAddress().DisplayAddress());
     }
