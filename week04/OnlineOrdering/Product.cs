@@ -23,7 +23,7 @@ public class Product
         _quantity = quantity;
     }
 
-    public float ProductCost()
+    public float ProductCost(int quantity)
     {
         return _price * quantity;
     }
