@@ -23,8 +23,13 @@ public class Product
         _quantity = quantity;
     }
 
-    public float ProductCost(int quantity)
+    public float ProductCost()
     {
-        return _price * quantity;
+        return _price * _quantity;
+    }
+
+    public string DisplayProduct()
+    {
+        return $"{_name} ({_productID}) ... ${_price} x {_quantity}";
     }
 }
