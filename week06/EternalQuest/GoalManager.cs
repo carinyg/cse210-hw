@@ -144,7 +144,7 @@ public class GoalManager
     public void SaveGoals(string userName)
     {
         string fileName = userName + "Journal.txt";
-        using (StreamWriter outputFile = new StreamWriter(fileName))
+        using (StreamWriter outputFile = new StreamWriter(fileName, false))
         {
             outputFile.WriteLine(_score);
             foreach (Goal goal in _goals)
