@@ -5,6 +5,11 @@ class Program
 {
     static void Main(string[] args)
     {
+        //For Creativity, I start the program with a welcome message and ask the user for their name
+        //I then create a GoalManager object and ask the user if they have used the program before
+        //If they have, I load their goals and score, if not, I create a new file for them
+        //I removed the loading of goals from the GoalManager start method.
+        //I also added a counter to the checkbox of Eternal Goals to show how many times the goal has been completed.
         Console.Clear();
         Console.WriteLine("Welcome to Eternal Quest!");
         Console.WriteLine();

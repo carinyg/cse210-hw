@@ -1,7 +1,4 @@
-2100
-SimpleGoal,Give a talk,Speak in Sacrament Meeting when asked,50, True
-EternalGoal,Read the Scriptures,read a chapter or section of scripture,50, 6
-ChecklistGoal,Attend the temple,Perform an ordinance at the temple,550,3,500, 3
-SimpleGoal,Bear testimony,share my testimony in fast and testimony meeting,100, True
-ChecklistGoal,Go on a walk,walk for at least 15 minutes,100,500,5000, 8
-ChecklistGoal,Attend the temple,perform an ordinance at the temple,50,3,500, 1
+0
+SimpleGoal,bear testimony,bear testimony in fast meeting,50, False
+EternalGoal,read scriptures,read a chapter or section of scripture,50, 0
+ChecklistGoal,attend the temple,perform an ordinance at the temple,50,3,500, 0

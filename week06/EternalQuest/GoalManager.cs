@@ -24,9 +24,8 @@ public class GoalManager
             Console.WriteLine("  1. Create New Goal");
             Console.WriteLine("  2. List Goals");
             Console.WriteLine("  3. Save Goals");
-            Console.WriteLine("  4. Load Goals");
-            Console.WriteLine("  5. Record Event");
-            Console.WriteLine("  6. Quit");
+            Console.WriteLine("  4. Record Event");
+            Console.WriteLine("  5. Quit");
             Console.Write("Select a choice from the menu: ");
             choice = Console.ReadLine();
             Console.WriteLine();
@@ -43,15 +42,12 @@ public class GoalManager
             {
                 SaveGoals(userName);
             }
+            
             else if (choice == "4")
-            {
-                LoadGoals(userName);
-            }
-            else if (choice == "5")
             {
                 RecordEvent();
             }
-            else if (choice == "6")
+            else if (choice == "5")
             {
                 Console.WriteLine("Good luck with your Eternal Quest! See you next time!");
                 Console.WriteLine();
@@ -61,7 +57,7 @@ public class GoalManager
                 Console.WriteLine("Invalid choice. Please try again.");
                 Console.WriteLine("Press any key to continue...");
             }
-        } while (choice != "6");
+        } while (choice != "5");
     }
 
     public void DisplayPlayerInfo()
