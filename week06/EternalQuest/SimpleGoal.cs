@@ -28,7 +28,7 @@ public class SimpleGoal : Goal
 
     public override string GetDetailsString()
     {
-        if (IsComplete())
+        if (_isComplete == true)
         {
             return $"[X] {_shortName} ({_description})";
         }

@@ -19,6 +19,7 @@ public class GoalManager
         string choice = "0";
         do
         {
+            Console.WriteLine();
             Console.WriteLine("Menu Options:");
             Console.WriteLine("  1. Create New Goal");
             Console.WriteLine("  2. List Goals");
