@@ -59,12 +59,6 @@ public class GoalManager
                 Console.WriteLine("Press any key to continue...");
             }
         } while (choice != "6");
-        
-
-
-        
-
-
     }
 
     public void DisplayPlayerInfo()
@@ -80,7 +74,41 @@ public class GoalManager
     {}
 
     public void CreateGoal()
-    {}
+    {
+        Console.WriteLine("There are three types of goals:");
+        Console.WriteLine("  1. Simple Goal");
+        Console.WriteLine("  2. Eternal Goal");
+        Console.WriteLine("  3. Checklist Goal");
+        Console.Write("Please select a goal type: ");
+        string goalChoice = Console.ReadLine();
+        Console.Clear();
+        Console.Write("What is the name of the goal? ");
+        string name = Console.ReadLine();
+        Console.Write("What is a short description of the goal? ");
+        string description = Console.ReadLine();
+        Console.Write("How many points is the goal worth? ");
+        int points = int.Parse(Console.ReadLine());
+
+        if (goalChoice == "1")
+        {
+            _goals.Add(new SimpleGoal(name, description, points));
+        }
+        else if (goalChoice == "2")
+        {
+            _goals.Add(new EternalGoal(name, description, points));
+        }
+        else if (goalChoice == "3")
+        {
+            Console.Write("How many times must the goal be completed to reach the target? ");
+            int target = int.Parse(Console.ReadLine());
+            Console.Write("How many bonus points are awarded for reaching the target? ");
+            int bonus = int.Parse(Console.ReadLine());
+            _goals.Add(new ChecklistGoal(name, description, points, target, bonus));
+        }
+        Console.WriteLine();
+        Console.WriteLine("Goal created successfully!");
+        Console.Clear();
+    }
 
     public void RecordEvent()
     {}
