@@ -194,7 +194,8 @@ public class GoalManager
                 {
                     int target = int.Parse(parts[4]);
                     int bonus = int.Parse(parts[5]);
-                    _goals.Add(new ChecklistGoal(name, description, points, target, bonus));
+                    int amountCompleted = int.Parse(parts[6]);
+                    _goals.Add(new ChecklistGoal(name, description, points, target, bonus, amountCompleted));
                 }
             }
         }

@@ -11,6 +11,13 @@ public class ChecklistGoal : Goal
         _bonus = bonus;
     }
 
+    public ChecklistGoal(string name, string description, int points, int target, int bonus, int amountCompleted) : base(name, description, points)
+    {
+        _amountCompleted = amountCompleted;
+        _target = target;
+        _bonus = bonus;
+    }
+
     public override void RecordEvent()
     {
         Console.WriteLine("Checklist goal recorded! You're doing a good job!");
@@ -49,6 +56,6 @@ public class ChecklistGoal : Goal
 
     public override string GetStringRepresentation()
     {
-        return $"ChecklistGoal,{_shortName},{_description},{_points},{_target},{_bonus}";
+        return $"ChecklistGoal,{_shortName},{_description},{_points},{_target},{_bonus}, {_amountCompleted}";
     }
 }
