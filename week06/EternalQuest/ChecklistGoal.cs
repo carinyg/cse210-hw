@@ -12,20 +12,43 @@ public class ChecklistGoal : Goal
     }
 
     public override void RecordEvent()
-    {}
+    {
+        Console.WriteLine("Checklist goal recorded! You're doing a good job!");
+        _amountCompleted++;
+        Console.WriteLine();
+        if (_amountCompleted == _target)
+        {
+            Console.WriteLine($"Congratulations! You've completed the goal! You've earned {_bonus} bonus points!");
+            _points += _bonus;
+        }
+    }
 
     public override bool IsComplete()
     {
-        return false;
+        if (_amountCompleted == _target)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public override string GetDetailsString()
     {
-        return "";
+        if (IsComplete())
+        {
+            return $"[X] {_shortName} ({_description} -- Currently completed: {_amountCompleted}/{_target})";
+        }
+        else
+        {
+            return $"[ ] {_shortName} ({_description}) -- Currently completed: {_amountCompleted}/{_target}";
+        }
     }
 
     public override string GetStringRepresentation()
     {
-        return "";
+        return $"ChecklistGoal,{_shortName},{_description},{_points},{_target},{_bonus}";
     }
 }

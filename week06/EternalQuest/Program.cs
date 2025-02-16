@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 class Program
 {
@@ -17,6 +18,7 @@ class Program
         if (response == "y")
         {
             goalManager.LoadGoals(userName);
+            goalManager.LoadScore(userName);
         }
         else
         {
@@ -24,19 +26,12 @@ class Program
             using (StreamWriter outputFile = new StreamWriter(fileName))
             {
                 outputFile.WriteLine("0");
-                outputFile.WriteLine(" : , , ");
             }
         }
 
         Console.Clear();
         goalManager.DisplayPlayerInfo();
         Console.WriteLine();
-        goalManager.Start(userName);
-
-
-
-        
-
-        
+        goalManager.Start(userName);        
     }
 }
