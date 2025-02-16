@@ -7,7 +7,7 @@ class Program
         Console.Clear();
         Console.WriteLine("Welcome to Eternal Quest!");
         Console.WriteLine();
-        Console.WriteLine("What is your first name?");
+        Console.Write("What is your first name? ");
         string userName = Console.ReadLine();
         GoalManager goalManager = new GoalManager(userName);
         Console.WriteLine();
@@ -24,6 +24,7 @@ class Program
             using (StreamWriter outputFile = new StreamWriter(fileName))
             {
                 outputFile.WriteLine("0");
+                outputFile.WriteLine(" : , , ");
             }
         }
 
