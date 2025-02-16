@@ -14,6 +14,7 @@ public class SimpleGoal : Goal
 
     public override void RecordEvent()
     {
+        Console.Clear();
         Console.WriteLine("Simple goal completed! You're doing a good job!");
         IsComplete();
         Console.WriteLine();

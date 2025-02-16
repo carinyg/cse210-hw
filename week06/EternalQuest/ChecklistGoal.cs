@@ -20,6 +20,7 @@ public class ChecklistGoal : Goal
 
     public override void RecordEvent()
     {
+        Console.Clear();
         Console.WriteLine("Checklist goal recorded! You're doing a good job!");
         _amountCompleted++;
         Console.WriteLine();

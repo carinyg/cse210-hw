@@ -13,6 +13,7 @@ public class EternalGoal : Goal
 
     public override void RecordEvent()
     {
+        Console.Clear();
         _completionCount++;
         Console.WriteLine($"Eternal goal recorded! You've done this goal {_completionCount} times. Good job!");
         Console.WriteLine();
