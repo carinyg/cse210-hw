@@ -1,4 +1,6 @@
-50
+860
 SimpleGoal,Give a talk,Speak in Sacrament Meeting when asked,50, True
-EternalGoal,Read the Scriptures,Read a chapter or section of scripture,50, 0
-ChecklistGoal,Attend the temple,perform one ordinance at the temple,50,3,500
+EternalGoal,Read the Scriptures,Read a chapter or section of scripture,50, 2
+ChecklistGoal,Attend the temple,perform one ordinance at the temple,550,3,500
+ChecklistGoal,Go on a walk,Walk for at least 15 minutes,50,5,500
+SimpleGoal,Do Laundry,Get the towel load done,10, True

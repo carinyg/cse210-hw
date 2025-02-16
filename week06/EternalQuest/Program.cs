@@ -22,7 +22,7 @@ class Program
         }
         else
         {
-            string fileName = userName + "journal.txt";
+            string fileName = userName + "Journal.txt";
             using (StreamWriter outputFile = new StreamWriter(fileName))
             {
                 outputFile.WriteLine("0");

@@ -76,7 +76,8 @@ public class GoalManager
         int count = 1;
         foreach (Goal goal in _goals)
         {
-           Console.WriteLine($"{count}. {goal.GetName()}");
+            Console.WriteLine($"{count}. {goal.GetName()}");
+            count++;
         }
     }
 
@@ -137,12 +138,12 @@ public class GoalManager
         _score += _goals[goalChoice - 1].GetPoints();
         Console.WriteLine();
         Console.WriteLine("Event recorded successfully!");
-        Console.Clear();
+        Console.WriteLine();
     }
 
     public void SaveGoals(string userName)
     {
-        string fileName = userName + "journal.txt";
+        string fileName = userName + "Journal.txt";
         using (StreamWriter outputFile = new StreamWriter(fileName))
         {
             outputFile.WriteLine(_score);
@@ -156,7 +157,7 @@ public class GoalManager
 
     public void LoadScore(string userName)
     {
-        string fileName = userName + "journal.txt";
+        string fileName = userName + "Journal.txt";
         using (StreamReader file = new StreamReader(fileName))
         {
             _score = int.Parse(file.ReadLine());
@@ -165,7 +166,7 @@ public class GoalManager
 
     public void LoadGoals(string userName)
     {
-        string fileName = userName + "journal.txt";
+        string fileName = userName + "Journal.txt";
 
         using (StreamReader file = new StreamReader(fileName))
         {
