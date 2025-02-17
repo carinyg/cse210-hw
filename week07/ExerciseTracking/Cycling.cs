@@ -1,8 +1,9 @@
 public class Cycling : Activity
 {
-    public Cycling(string date, int duration) : base(date, duration)
+    private int _speed;
+    public Cycling(string date, int duration, int speed) : base(date, duration)
     {
-
+        _speed = speed;
     }
 
     public override float GetDistance()

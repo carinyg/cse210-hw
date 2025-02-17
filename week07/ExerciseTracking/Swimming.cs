@@ -1,8 +1,9 @@
 public class Swimming : Activity
 {
-    public Swimming(string date, int duration) : base(date, duration)
+    private int _lapAmount;
+    public Swimming(string date, int duration, int lapAmount) : base(date, duration)
     {
-
+        _lapAmount = lapAmount;
     }
 
     public override float GetDistance()

@@ -1,12 +1,14 @@
 public class Running : Activity
 {
-    public Running(string date, int duration) : base(date, duration)
+    private float _distance;
+    public Running(string date, int duration, float distance) : base(date, duration)
     {
-
+        _distance = distance;
     }
 
     public override float GetDistance()
     {
+
         return 0;
     }
 
