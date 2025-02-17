@@ -15,7 +15,10 @@ public abstract class Activity
 
     public abstract float GetPace();
 
-    public abstract string GetSummary();
+    public virtual string GetSummary()
+    {
+        return $"{GetDate()} Activity ({GetDuration()} min)- Distance: {GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile";
+    }
 
     public int GetDuration()
     {
