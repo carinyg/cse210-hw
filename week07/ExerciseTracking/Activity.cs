@@ -11,9 +11,9 @@ public abstract class Activity
 
     public abstract float GetDistance();
 
-    public abstract float GetSpeed();
+    public abstract float GetSpeed(int _duration);
 
-    public abstract float GetPace();
+    public abstract float GetPace(int _duration);
 
     public string GetSummary()
     {

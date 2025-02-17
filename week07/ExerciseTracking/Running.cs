@@ -12,12 +12,12 @@ public class Running : Activity
         return 0;
     }
 
-    public override float GetSpeed()
+    public override float GetSpeed(int duration)
     {
         return 0;
     }
 
-    public override float GetPace()
+    public override float GetPace(int duration)
     {
         return 0;
     }

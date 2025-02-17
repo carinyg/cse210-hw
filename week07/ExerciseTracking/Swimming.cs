@@ -8,16 +8,20 @@ public class Swimming : Activity
 
     public override float GetDistance()
     {
-        return 0;
+        float distance = _lapAmount * 50;
+        float distanceInMiles = distance / 1000 * 0.62f;
+        return distanceInMiles;
     }
 
-    public override float GetSpeed()
+    public override float GetSpeed(int duration)
     {
-        return 0;
+        float speedMPH = GetDistance() / duration * 60;
+        return speedMPH;
     }
 
-    public override float GetPace()
+    public override float GetPace(int duration)
     {
-        return 0;
+        float pace = duration / GetDistance();
+        return pace;
     }
 }
