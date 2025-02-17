@@ -13,15 +13,20 @@ public class Swimming : Activity
         return distanceInMiles;
     }
 
-    public override float GetSpeed(int duration)
+    public override float GetSpeed()
     {
-        float speedMPH = GetDistance() / duration * 60;
+        float speedMPH = GetDistance() / GetDuration() * 60;
         return speedMPH;
     }
 
-    public override float GetPace(int duration)
+    public override float GetPace()
     {
-        float pace = duration / GetDistance();
-        return pace;
+        float paceMinPerMile = GetDuration() / GetDistance();
+        return paceMinPerMile;
+    }
+
+    public override string GetSummary()
+    {
+        return $"{GetDate()} Swimming ({GetDuration()} min)- Distance: {GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile";
     }
 }

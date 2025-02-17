@@ -8,17 +8,23 @@ public class Running : Activity
 
     public override float GetDistance()
     {
-
-        return 0;
+        return _distance;
     }
 
-    public override float GetSpeed(int duration)
+    public override float GetSpeed()
     {
-        return 0;
+        float speedMPH = GetDistance() / GetDuration() * 60;
+        return speedMPH;
     }
 
-    public override float GetPace(int duration)
+    public override float GetPace()
     {
-        return 0;
+        float PaceMinPerMile = GetDuration() / GetDistance();
+        return PaceMinPerMile;
+    }
+
+    public override string GetSummary()
+    {
+        return $"{GetDate()} Running ({GetDuration()} min)- Distance: {GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile";
     }
 }
